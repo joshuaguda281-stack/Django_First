@@ -1,36 +1,24 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Hospital Management System</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'products' %}">products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">about</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<h2>Welcome Home</h2>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="
+{% static 'images/portraits-of-modern-dairy-u2gQLnYgQ-c-unsplash.jpg'%}" alt="Hospital" class="img-fluid">
+        </div>
+        <div class="col-sm-6">
+            <h1>Welcome to the Hospital Management System</h1>
+            <h3>This is the home page of our application.</h3>
+            <p>Here you can find information about our products and services.</p>
+            <p>Feel free to explore the website and learn more about us.</p>
+            <p>Click on the navigation links above to access different sections of the website.</p>
+    <p>We are committed to providing the best healthcare solutions for our patients.</p>
+    <p>Thank you for visiting our website!</p>
+        </div>
+</div>
+</div>
+{% endblock %}
