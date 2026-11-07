@@ -7,7 +7,7 @@
 <div class="container">
 <div class="row justify-content-center">
     <div class="col-8">
-        <table class="table table-bordered">
+        <table class="table table-bordered animate__animated animate__bounce">
             <tr>
                 <th>Hospital Name</th>
                 <td>{{ hospital_name }}</td>
@@ -31,7 +31,7 @@
         </table>
     </div>
 </div>
-<div class="col-8 justify-content-center">
+<div class="col-8 justify-content-center animate__animated animate__fadeIn">
     <p>Welcome to the Hospital Management System. We are dedicated to providing the best healthcare services to our patients.</p>
     <p>Our team of experienced professionals is committed to ensuring the well-being of our patients and delivering high-quality medical care.</p>
     <p>We strive to create a comfortable and safe environment for our patients, where they can receive the care they need.</p>
@@ -41,4 +41,12 @@
     <p>For more information, please contact us at the details provided above.</p>
 </div>
 </div>
+{% endblock %}
+
+{% block extra_links %}
+{#    animation links #}
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 {% endblock %}
